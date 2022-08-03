@@ -39,3 +39,24 @@ console.log(arr);
 var str = "Jagdish";
 str[0] = "K"; //won't change becuase we can't change string its immutable
 console.log(str);  
+
+
+
+
+
+
+
+
+
+var admin = {
+    name : "pablo",
+    age : 24
+}
+
+Object.freeze(admin);
+//Once we freeze object we can't modify or change values
+// Immutability
+
+admin.name = "chulbul";
+
+console.log(admin);
