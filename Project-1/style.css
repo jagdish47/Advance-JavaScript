@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+button{
+    background-color: pink;
+    height: 50px;
+    width: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    border: 1px solid black;
+    margin: 10px ;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: rgb(211, 168, 175);
+}
+
+body{
+    /* border: 1px solid black; */
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(231, 233, 235);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    /* border: 1px solid black; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    font-size: 150px;
+}
