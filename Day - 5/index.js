@@ -9,11 +9,8 @@
 // if promise going to success than we do that
 // if promise going to fail than we'll do that
 
-
 // If your successfully commit than then() function will execute
 // If your unsuccesslly commit than catch() function will execute
-
-
 
 // let myPromise = new Promise(function(resolve, reject){
 
@@ -25,16 +22,8 @@
 //     reject("I tried")
 // });
 
-
-
 // resolve -- then()
 // reject -- catch()
-
-
-
-
-
-
 
 // let passexam = false;
 
@@ -52,28 +41,49 @@
 //     console.log("res : ", res);
 // });
 
-
 // myPromise.catch(function(err){
 //     console.log("err coming maybe because spelling mistake", err);
 // })
 
+let queue = ["Pablo", "Raju", "syam", "Babu bhaiyaa"];
+
+function Register() {
+  let name = document.getElementById("name").value;
+
+  queue.push(name);
+
+  let message = `${name} your registration is successfull, cheers!`;
+
+  alert(message);
+
+  let promise = new Promise(function (resolve, reject) {
 
 
-
-let queue = ["Pablo", "Raju", "Babu bhaiyaa"];
-
-
-function Register(){
-
-    let name = document.getElementById("name").value;
-
-    queue.push(name);
-
-    let message =`${name} your registration is successfull, cheers!`;
-
-    alert(message);
+    let x = setInterval(function () {
+        if (queue[0] === name) {
+            resolve(`${name} it's your turn now`);
+          }
+    },1000);
 
 
-     
+    
+  });
+
+  promise.then(function (res) {
+    console.log("res : ", res);
+  });
+} 
+
+function vaccination_Inprogress(){
+
+    if(queue === 0){
+        clearInterval(id);
+    }
+    queue.shift();
+    console.log("queue : ",queue);
 
 }
+
+var id = setInterval(vaccination_Inprogress, 3000);
+
+
